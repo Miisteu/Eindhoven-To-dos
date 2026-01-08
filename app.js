@@ -4,9 +4,9 @@
   const defaults = {
     categories: ['Kopen','Coderen/Renamen'],
     todos:[
-      {id: genId(), text: 'Domein Naam kopen | €4,99 - eindhovenrp-apv.nl', cat: 'Kopen', done:false},
-      {id: genId(), text: 'FiveGuard Kopen | €125,00', cat: 'Kopen', done:false},
-      {id: genId(), text: 'EUP Key kopen | €15,57', cat: 'Kopen', done:false},
+      {id: genId(), text: 'Domein Naam kopen | €4,99 - eindhovenrp-apv.nl - [Hostinger](https://cart.hostinger.com/pay/c0da5451-81ad-4a2e-9a86-96e08b2a4ff3?_ga=GA1.1.1399628200.1767905466&_ga_73N1QWLEMH=GS2.1.s1767905466%24o1%24g1%24t1767905772%24j55%24l0%24h2037003587%24dGZYWgJv0jwMuKHcHEChiBO6s5-mHtvKZ1Q&session_id=1767905466&device_id=b6201e3b-6ea5-4f53-9e1c-d44fbf6de7b8&from=websites)', cat: 'Kopen', done:false},
+      {id: genId(), text: 'FiveGuard Kopen | €125,00 - [FiveGuard](https://fiveguard.net/#pricing)', cat: 'Kopen', done:false},
+      {id: genId(), text: 'EUP Key kopen | €15,57 - [CFX-Portal](https://portal.cfx.re/subscriptions/element-club)', cat: 'Kopen', done:false},
       {id: genId(), text: 'APV Website code maken/renamen', cat: 'Coderen/Renamen', done:false},
       {id: genId(), text: 'Alle Errors/Warnings in de FiveM Server wegwerken', cat: 'Coderen/Renamen', done:false}
     ]
@@ -105,5 +105,6 @@
       refs.todoList.appendChild(card)
     })
   }
+
 
 })();
