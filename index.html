@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Todo's Eindhoven Roleplay</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Todo's Eindhoven Roleplay</h1>
+      <p class="subtitle">Privé todo-app — voeg toe, markeer als gedaan of verwijder.</p>
+    </header>
+
+    <section class="add-area">
+      <input id="todoText" placeholder="Nieuwe todo..." maxlength="200" />
+      <select id="categorySelect"></select>
+      <button id="addBtn">Voeg toe</button>
+      <button id="newCatBtn" class="link">+ Nieuwe categorie</button>
+    </section>
+
+    <section class="filters">
+      <div>
+        <label>Filter:</label>
+        <select id="filterSelect">
+          <option value="all">Alles</option>
+          <option value="active">Actief</option>
+          <option value="done">Gedaan</option>
+        </select>
+      </div>
+      <div>
+        <label>Zoek:</label>
+        <input id="searchInput" placeholder="Zoek..." />
+      </div>
+    </section>
+
+    <section id="todoList" class="todo-list"></section>
+
+    <footer>
+      <small>Bestanden lokaal bewaren met LocalStorage. Deel alleen de map met je maatje.</small>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
