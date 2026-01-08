@@ -74,6 +74,10 @@
     state.todos = state.todos.filter(x=>x.id!==id); save(); render()
   }
 
+  function parseMarkdownLinks(text){
+    return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+  }
+
   function render(){
     refs.todoList.innerHTML = ''
     const filter = refs.filterSelect.value
@@ -93,7 +97,7 @@
       const card = document.createElement('div'); card.className='todo-card'
       const left = document.createElement('div'); left.className='left'
       const cb = document.createElement('div'); cb.className = 'checkbox' + (t.done? ' done':''); cb.title = t.done ? 'Ongedaan maken' : 'Markeer als gedaan'; cb.addEventListener('click', ()=>toggleDone(t.id))
-      const txt = document.createElement('div'); txt.className = 'text' + (t.done? ' done':''); txt.textContent = t.text
+      const txt = document.createElement('div'); txt.className = 'text' + (t.done? ' done':''); txt.innerHTML = parseMarkdownLinks(t.text)
       const meta = document.createElement('div'); meta.className='meta'; const badge = document.createElement('span'); badge.className='badge'; badge.textContent = t.cat || 'Algemeen'; meta.appendChild(badge)
       left.appendChild(cb); left.appendChild(txt); left.appendChild(meta)
 
@@ -105,6 +109,4 @@
       refs.todoList.appendChild(card)
     })
   }
-
-
 })();
