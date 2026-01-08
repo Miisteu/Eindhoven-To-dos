@@ -23,7 +23,10 @@ button.link{background:transparent;color:var(--muted);border:none;text-decoratio
 .checkbox{width:18px;height:18px;border-radius:4px;border:2px solid var(--muted);display:inline-block;cursor:pointer}
 .checkbox.done{background:var(--accent);border-color:var(--accent)}
 .text{font-size:15px}
+.text a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--accent)}
+.text a:hover{text-decoration:underline}
 .text.done{text-decoration:line-through;color:var(--muted)}
+.text.done a{color:var(--muted);border-bottom-color:var(--muted)}
 .meta{display:flex;gap:8px;align-items:center;color:var(--muted);font-size:13px}
 .actions button{background:transparent;border:0;color:var(--muted);cursor:pointer;padding:6px}
 .badge{padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px}
